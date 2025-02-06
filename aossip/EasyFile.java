@@ -220,7 +220,7 @@ public class EasyFile {
         skip(index);
     }
 
-    // Copies the contents of the current file to another oss.aossip.easyfile.EasyFile
+    // Copies the contents of the current file to another EasyFile
     public void copyTo(EasyFile EasyFile) throws IOException {
         newReader();
         String line;
