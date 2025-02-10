@@ -23,6 +23,10 @@ getInt(int index): Retrieves the nth integer from the file.
 
 getDouble(int index): Retrieves the nth double from the file.
 
+getLong(int index): Retrieves the nth long from the file.
+
+getByte(int index): Retrieves the nth byte from the file.
+
 toArrayList(): Reads the entire file into an ArrayList<String>, or returns null if empty.
 
 toArray(): Reads the entire file into a String[] array, or returns null if empty.
@@ -36,6 +40,10 @@ nextLine(): Reads and returns the next line from the file.
 nextInt(): Reads and returns the next available integer in the file.
 
 nextDouble(): Reads and returns the next available double in the file.
+
+nextLong(): Reads and returns the next available long in the file.
+
+nextByte(): Reads and returns the next available byte in the file.
 
 nextString(): Reads and returns the next available non-numeric string in the file.
 
