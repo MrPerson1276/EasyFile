@@ -122,6 +122,42 @@ public class EasyFile {
         throw new IOException("No double with index " + index);
     }
 
+    // Retrieves the nth long from the file
+    public long getLong(int index) throws IOException {
+        newReader();
+        int longCount = 0;
+        String line;
+        while ((line = nextLine()) != null) {
+            try {
+                long longLine = Long.parseLong(line);
+                if (longCount == index) {
+                    return longLine;
+                }
+                longCount++;
+            } catch (Exception _) {
+            }
+        }
+        throw new IOException("No long with index " + index);
+    }
+
+    // Retrieves the nth byte from the file
+    public byte getByte(int index) throws IOException {
+        newReader();
+        int byteCount = 0;
+        String line;
+        while ((line = nextLine()) != null) {
+            try {
+                byte byteLine = Byte.parseByte(line);
+                if (byteCount == index) {
+                    return byteLine;
+                }
+                byteCount++;
+            } catch (Exception _) {
+            }
+        }
+        throw new IOException("No byte with index " + index);
+    }
+
     // Reads the entire file into an ArrayList<String>, or returns null if empty
     public ArrayList<String> toArrayList() throws IOException {
         newReader();
@@ -192,6 +228,30 @@ public class EasyFile {
             }
         }
         throw new IOException("No following doubles");
+    }
+
+    // Reads and returns the next available long in the file
+    public long nextLong() throws IOException {
+        String line;
+        while ((line = nextLine()) != null) {
+            try {
+                return Long.parseLong(line);
+            } catch (Exception _) {
+            }
+        }
+        throw new IOException("No following longs");
+    }
+
+    // Reads and returns the next available byte in the file
+    public byte nextByte() throws IOException {
+        String line;
+        while ((line = nextLine()) != null) {
+            try {
+                return Byte.parseByte(line);
+            } catch (Exception _) {
+            }
+        }
+        throw new IOException("No following bytes");
     }
 
     // Reads and returns the next available non-numeric string in the file
