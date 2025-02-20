@@ -59,6 +59,8 @@ length(): Counts and returns the total number of lines in the file.
 
 getFileSize(): Returns the file size in bytes.
 
+getFileName(): Returns the filename of the file.
+
 getFilePath(): Returns the filepath of the file.
 
 clear(): Clears the file (same as newWriter() but with clearer intent).
