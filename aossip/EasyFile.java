@@ -311,6 +311,11 @@ public class EasyFile {
         return file.length();
     }
 
+    // Returns filename
+    public String getFileName() {
+        return this.file.getName();
+    }
+    
     // Returns filepath
     public String getFilePath() {
         return file.getAbsolutePath();
